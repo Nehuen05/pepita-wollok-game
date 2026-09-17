@@ -13,10 +13,10 @@ program PepitaGame {
 	game.addVisual(pepita)
 	game.addVisual(alpiste)
 
-	// keyboard.left().onPressDo({ pepita.mover(izquierda)})
-	// keyboard.right().onPressDo({ pepita.mover(derecha)})
-	// keyboard.up().onPressDo({ pepita.mover(arriba)})
-	// keyboard.down().onPressDo({ pepita.mover(abajo)})
+	keyboard.left().onPressDo({ pepita.mover(izquierda)})
+	keyboard.right().onPressDo({ pepita.mover(derecha)})
+	keyboard.up().onPressDo({ pepita.mover(arriba)})
+	keyboard.down().onPressDo({ pepita.mover(abajo)})
 
 	game.start()
 }

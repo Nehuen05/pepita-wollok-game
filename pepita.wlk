@@ -10,7 +10,7 @@ object pepita {
 	}
 
 	method position() { //metodo necesario para wollok game
-		return game.center().up(2)
+		return game.center()
 	}
 
 	method position(_position) { //el setter solo lo necesito para testear
