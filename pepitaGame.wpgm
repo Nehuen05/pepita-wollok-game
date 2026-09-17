@@ -11,7 +11,7 @@ program PepitaGame {
 	game.height(10)
 	game.width(10)
 	game.boardGround("fondo2.jpg")
-
+	game.addVisual(silvestre)
 	game.addVisual(pepita)
 	game.addVisual(alpiste)
 
@@ -19,6 +19,9 @@ program PepitaGame {
 	keyboard.right().onPressDo({ pepita.mover(derecha)})
 	keyboard.up().onPressDo({ pepita.mover(arriba)})
 	keyboard.down().onPressDo({ pepita.mover(abajo)})
+	
+	keyboard.left().onPressDo({ silvestre.mover(izquierda)})
+	keyboard.right().onPressDo({ silvestre.mover(derecha)})
 
 	game.start()
 }

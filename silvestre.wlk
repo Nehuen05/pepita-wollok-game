@@ -1,7 +1,7 @@
 import wollok.game.*
 
 object silvestre {
-    var position = game.origin()
+    var position = game.at(3, 0)
 
     method image() {
         return "silvestre.png"
