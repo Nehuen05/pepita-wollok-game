@@ -23,5 +23,8 @@ program PepitaGame {
 	keyboard.left().onPressDo({ silvestre.mover(izquierda)})
 	keyboard.right().onPressDo({ silvestre.mover(derecha)})
 
+	game.onCollideDo(silvestre, { elemento =>
+    game.say(elemento, "Opa! Me llevé puesta un gato!")})
+
 	game.start()
 }
