@@ -26,5 +26,8 @@ program PepitaGame {
 	game.onCollideDo(silvestre, { elemento =>
     game.say(elemento, "Opa! Me llevé puesta un gato!")})
 
+	const tick = game.tick(2000, { pepita.movete(abajo) }, false)
+  tick.start()
+
 	game.start()
 }

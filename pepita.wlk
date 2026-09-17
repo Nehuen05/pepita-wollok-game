@@ -45,6 +45,10 @@ object pepita {
 		return 10 + distancia/10
   	}
 	
+	method movete(direccion) {
+		const nuevaPosition = direccion.siguiente(position)
+		position = nuevaPosition
+	}
 
 	method mover(direccion) {
 		const nuevaPosition = direccion.siguiente(position) //No modifico la position en la primera linea porque volar podría lanzar error
