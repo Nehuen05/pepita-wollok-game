@@ -2,7 +2,7 @@ import wollok.game.*
 
 object pepita {
 
-	var property energia = 100 //El getter y setter solo lo necesito para testear
+	var property energia = 10000 //El getter y setter solo lo necesito para testear
 	var position = game.origin()
 
 	method image() { //metodo necesario para wollok game
@@ -53,8 +53,19 @@ object pepita {
 	method mover(direccion) {
 		const nuevaPosition = direccion.siguiente(position) //No modifico la position en la primera linea porque volar podría lanzar error
 		self.volar(10) //asume que cada celda está a 10 km
-		position = nuevaPosition //ahora si puedo modificar la posicion
+		self.intentarMoverseA(dirección) //ahora si puedo modificar la posicion
 	}
 
+	method intentarMoverseA(nuevaPosicion) {
+        // Buscamos si hay alguna pared en la posición a la que queremos ir
+        const hayPared = game.colliders(nuevaPosicion).any({ objeto => objeto.className() == "muro" })
+        
+        // Si NO hay pared, nos movemos
+        if (not hayPared) {
+            position = nuevaPosicion
+        }
+    }
 }
+
+
 
