@@ -1,14 +1,17 @@
 object pepito{
     var position = game.origin()
-    const imagen = "hijo.png"
+    
+    method imagen() {
+        return "hijo.png"
+    }
 
     method intentarMoverseA(nuevaPosicion) {
-        // Buscamos si hay alguna pared en la posición a la que queremos ir
-        const hayPared = game.colliders(nuevaPosicion).any({ objeto => objeto.className() == "muro" })
+        // Mira si hay una Pared en el lugar al que quiere ir
+        const hayPared = game.colliders(nuevaPosicion).any({ objeto => objeto.className() == "Pared" })
         
-        // Si NO hay pared, nos movemos
+        // Solo cambia la posición si está libre
         if (not hayPared) {
             position = nuevaPosicion
-        }//self.intentarMoverseA(nuevaPosition)
+        }
     }
 }

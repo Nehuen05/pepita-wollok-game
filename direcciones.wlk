@@ -12,6 +12,8 @@ object tablero {
     }
 }
 
+
+
 object arriba {
 
     method siguiente(position) {
