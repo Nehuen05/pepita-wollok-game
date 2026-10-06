@@ -1,5 +1,5 @@
 object pepito{
-    var position = game.center()
+    var position = game.origin()
     
     method imagen() {
         return "hijo.png"
@@ -8,8 +8,14 @@ object pepito{
 		return position
 	}
 
-    method intentarMoverseA(nuevaPosicion) {
-        // Mira si hay una Pared en el lugar al que quiere ir
+    method hayMurosAdelante(posicion) {
+      return game.getObjectsIn(posicion) ==  "Muro"
+    }
+
+    method intentarMoverseA(direccion) {
+      const nuevaPosicion = direccion.siguiente(self.position())
+      if (not self.hayMurosAdelante(nuevaPosicion) ){
         position = nuevaPosicion
+      }
     }
 }

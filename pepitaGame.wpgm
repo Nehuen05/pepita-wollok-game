@@ -14,7 +14,7 @@ program PepitaGame {
 	game.addVisual(silvestre)
 	game.addVisual(pepita)
 	game.addVisual(alpiste)
-	game.addVisual(muro)
+	game.addVisual(Muro)
 	game.addVisual(pepito)
 
 	keyboard.left().onPressDo({ pepita.mover(izquierda)})
