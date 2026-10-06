@@ -32,6 +32,24 @@ program PepitaGame {
 	const tick = game.tick(2000, { pepita.movete(abajo) }, false)
   tick.start()
 
+	keyboard.w().onPressDo({ 
+        pepito.intentarMoverseA(arriba) 
+    })
+
+    // Mover hacia ABAJO (Resta 1 en Y)
+    keyboard.s().onPressDo({ 
+        pepito.intentarMoverseA(abajo) 
+    })
+
+    // Mover hacia la IZQUIERDA (Resta 1 en X)
+    keyboard.a().onPressDo({ 
+        pepito.intentarMoverseA(izquierda) 
+    })
+
+    // Mover hacia la DERECHA (Suma 1 en X)
+    keyboard.d().onPressDo({ 
+        pepito.intentarMoverseA(derecha) 
+    })
 
 	game.start()
 }
