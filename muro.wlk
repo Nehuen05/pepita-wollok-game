@@ -1,5 +1,5 @@
 import wollok.game.*
-object muro {
+class Muro {
     method image() = "muro.png"
     method position() = game.center()
 }

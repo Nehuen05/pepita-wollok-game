@@ -10,11 +10,6 @@ object pepito{
 
     method intentarMoverseA(nuevaPosicion) {
         // Mira si hay una Pared en el lugar al que quiere ir
-        if ()
-        
-        // Solo cambia la posición si está libre
-        else (not hayPared) {
-            position = nuevaPosicion
-        }
+        position = nuevaPosicion
     }
 }
