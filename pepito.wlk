@@ -1,16 +1,19 @@
 object pepito{
-    var position = game.origin()
+    var position = game.center()
     
     method imagen() {
         return "hijo.png"
     }
+    method position() { //metodo necesario para wollok game
+		return position
+	}
 
     method intentarMoverseA(nuevaPosicion) {
         // Mira si hay una Pared en el lugar al que quiere ir
-        const hayPared = game.colliders(nuevaPosicion).any({ objeto => objeto.className() == "Pared" })
+        if ()
         
         // Solo cambia la posición si está libre
-        if (not hayPared) {
+        else (not hayPared) {
             position = nuevaPosicion
         }
     }
