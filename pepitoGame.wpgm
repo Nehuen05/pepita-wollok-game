@@ -1,0 +1,25 @@
+import moneda.*
+import muro.*
+import pepito.*
+import direcciones.*
+import wollok.game.*
+
+program PepitoGame {
+    game.title("El titulo")
+	game.height(10)
+	game.width(10)
+	game.boardGround("fondo2.jpg")
+	game.addVisual(pepito)
+	game.addVisual(new Muro(position = game.at(2, 1)))
+    game.addVisual(new Muro(position = game.at(2, 2)))
+    game.addVisual(new Muro(position = game.at(2, 3)))
+    game.addVisual(new Muro(position = game.at(4, 5)))
+
+    
+    keyboard.up().onPressDo({ pepito.intentarMoverseA(arriba) })
+    keyboard.down().onPressDo({ pepito.intentarMoverseA(abajo) })
+    keyboard.left().onPressDo({ pepito.intentarMoverseA(izquierda) })
+    keyboard.right().onPressDo({ pepito.intentarMoverseA(derecha) })
+
+	game.start()
+}
